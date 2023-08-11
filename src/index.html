@@ -9,15 +9,34 @@
     <header>
       <img src="img/logoRyM.jpeg" alt="">
       <nav id="menu1">
-        <ul>
-          <li>Ver todo</li>
-          <li>Organizar de A-Z</li>
+        
+          <button id="callAll">Ver todos</button>
+          <ul>
+          <li>
+            <select name="Filters" id="Filters">
+              <option value="alien">Alien</option>
+              <option value="animal">Animal</option>
+              <option value="">Alien</option>
+              <option value="cronenberg">Cronenberg</option>
+              <option value="disease">Disease</option>
+              <option value="Human">Human</option>
+              <option value="Humanoid">Humanoid</option>
+              <option value="Mytholog">Mytholog</option>
+              <option value="parasite">Parasite</option>
+              <option value="Poopybutthole">Poopybutthole</option>
+              <option value="Robot">Robot</option>
+              <option value="Vampire">Vampire</option>
+              <option value="unknown">unknown</option>
+            </select>
+            <button id="Filter">Filtrar</button>
+          
+          </li>
           <li>Filtrar</li>
           <li>Calcular</li>
         </ul>
       </nav>
     </header>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script defer src="main.js" type="module"></script>
   </body>
 </html>

@@ -1,26 +1,16 @@
-import { example } from './data.js';
+// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 const printData = (characters) => {
-    let newDiv = document.createElement('div');
-    newDiv.setAttribute('id', 'container');
+  const newDiv = document.createElement('div');
+  newDiv.setAttribute('id', 'container');
 
-    document.getElementById('root').appendChild(newDiv);
+  document.getElementById('root').appendChild(newDiv);
 
-    characters.results.forEach(element => {
-        /*         
-        const titleDiv = document.createElement('div');
-        titleDiv.textContent = element.name;
-        newDiv.appendChild(titleDiv);
-
-        const photoDiv = document.createElement('img');
-        photoDiv.setAttribute('src', element.image);
-        newDiv.appendChild(photoDiv); 
-        */
-
-        const template = `
+  characters.results.forEach(element => {
+    const template = `
         <div class="card">
             <div class="title">${element.name}</div>
             <div class="photo">
@@ -30,10 +20,10 @@ const printData = (characters) => {
             
         </div>`;
 
-        newDiv.innerHTML += template;
-    });
+    newDiv.innerHTML += template;
+  });
 }
+const buttonShowAll = document.getElementById("callAll");
+buttonShowAll.addEventListener("click", printData(data));
 
-printData(data);
 
-console.log(example, data);
