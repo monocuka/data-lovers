@@ -1,4 +1,4 @@
-// import { example } from './data.js';
+import { filterData } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -24,6 +24,17 @@ const printData = (characters) => {
   });
 }
 const buttonShowAll = document.getElementById("callAll");
-buttonShowAll.addEventListener("click", printData(data));
+buttonShowAll.addEventListener("click", () => {
+  printData(data);
+});
+
+
+const btnFilter = document.getElementById("Filter");
+btnFilter.addEventListener("click", () => {
+  const speciesList = document.getElementById("Filters");
+  const selectedSpecie = speciesList.options[speciesList.selectedIndex].value;
+  filterData(selectedSpecie);
+})
+
 
 

@@ -1,8 +1,9 @@
 // estas funciones son de ejemplo
 
-export const showAll = () => {
+export const filterData = (data) => {
 
-  return 'example';
+
+  
 };
 
 export const anotherExample = () => {
