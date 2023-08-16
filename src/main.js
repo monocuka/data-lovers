@@ -1,4 +1,4 @@
-import { filterData } from './data.js';
+import { filterData, sortData } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -43,6 +43,18 @@ btnFilter.addEventListener("click", () => {
   //carga cuando doy click y si la pongo afuera se carga al iniciar y no funciona; 
   const filteredData =  filterData(selectedSpecie, data.results);
   printData(filteredData);
+});
+
+const buttonAscend = document.getElementById('orderAscen');
+buttonAscend.addEventListener("click", () => {
+  const sortedDataAsc = sortData(data);
+  printData(sortedDataAsc);
+});
+
+const buttonDescen = document.getElementById('orderDescen');
+buttonDescen.addEventListener("click", () => {
+  const sortedDataDesc = sortData(data);
+  printData(sortedDataDesc.reverse());
 });
 
 
