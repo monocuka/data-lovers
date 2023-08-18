@@ -57,10 +57,39 @@ buttonDescen.addEventListener("click", () => {
   printData(sortedDataDesc.reverse());
 });
 
+// _____________________________________________________
+const printDataPercent = (arrP) => {
+
+  if (document.getElementById('container')) {
+    
+    const container = document.getElementById('container');
+    document.getElementById('root').removeChild(container);
+  }
+
+  const newDiv = document.createElement('div');
+  newDiv.setAttribute('id', 'container');
+
+  document.getElementById('root').appendChild(newDiv);
+
+  arrP.forEach(element => {
+    const template = `
+        <div class="table">
+            <ul>
+            <li class="jsonSpecies">${element.name}</li>
+            <li class="jsonSpecies">${element.count}</li>
+            <li class="jsonSpecies">${element.percent}%</li>
+            </ul>
+        </div>`;
+
+    newDiv.innerHTML += template;
+  });
+}
+
+
 const buttonCalculateSpecies = document.getElementById("calculateSpecies");
 buttonCalculateSpecies.addEventListener("click", () => {
   const CounterData = computeState(data)
-  console.log(CounterData);
+  printDataPercent(CounterData);
 })
 
 
