@@ -1,4 +1,4 @@
-import { filterData, sortData } from './data.js';
+import { filterData, sortData, computeState } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -57,7 +57,11 @@ buttonDescen.addEventListener("click", () => {
   printData(sortedDataDesc.reverse());
 });
 
-
+const buttonCalculateSpecies = document.getElementById("calculateSpecies");
+buttonCalculateSpecies.addEventListener("click", () => {
+  const CounterData = computeState(data)
+  console.log(CounterData);
+})
 
 
 

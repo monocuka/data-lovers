@@ -20,3 +20,33 @@ export const sortData = (data) => {
   return orderBy;
   
 };
+
+export const computeState = (data) => {
+
+  const arrayData = data['results'];
+  const totalSpecies = arrayData.length;
+  let countAlien = 0;
+  let countAnimal = 0;
+  let countCronenberg = 0;
+  const arrayCounters = [];
+
+  for (let i = 0; i < totalSpecies; i++) {
+    if (arrayData[i].species === 'Alien' ) {
+      countAlien ++
+    }
+    if (arrayData[i].species === 'Animal') {
+      countAnimal ++
+    }
+    if (arrayData[i].species === 'Cronenberg') {
+      countCronenberg ++;
+    }
+  }
+
+  arrayCounters.push({'Alien': countAlien, 'percent': parseFloat(((countAlien*100)/totalSpecies).toFixed(2))});
+  arrayCounters.push({'Animal': countAnimal, 'percent': parseFloat(((countAnimal*100)/totalSpecies).toFixed(2))});
+  
+  console.log(countAlien, countAnimal, countCronenberg);
+  console.log(arrayCounters);
+ 
+
+}
