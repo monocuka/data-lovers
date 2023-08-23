@@ -8,32 +8,28 @@
   <body>
     <header>
       <img src="img/logoRyM.jpeg" alt="">
-      <nav id="menu1">
-        
-          <button id="callAll">Ver todos</button>
-          <ul>
-          <li>
-            <select name="Filters" id="Filters">
-              <option value="alien">Alien</option>
-              <option value="animal">Animal</option>
-              <option value="cronenberg">Cronenberg</option>
-              <option value="disease">Disease</option>
+      <nav id="menu1">  
+          <button id="callAll" class="navs">Ver todos</button>
+          <div id="filtered">
+            <select name="Filters" id="Filters" class="navs">
+              <option value="Alien">Alien</option>
+              <option value="Animal">Animal</option>
+              <option value="Cronenberg">Cronenberg</option>
+              <option value="Disease">Disease</option>
               <option value="Human">Human</option>
               <option value="Humanoid">Humanoid</option>
               <option value="Mytholog">Mytholog</option>
-              <option value="parasite">Parasite</option>
+              <option value="Parasite">Parasite</option>
               <option value="Poopybutthole">Poopybutthole</option>
               <option value="Robot">Robot</option>
               <option value="Vampire">Vampire</option>
               <option value="unknown">unknown</option>
             </select>
-            <button id="Filter">Filtrar</button>
-          
-          </li>
-          <li><button id="orderAscen">Ordenar A/Z</button></li>
-          <li><button id="orderDescen">Ordenar Z/A</button></li>
-          <li><Button id="calculateSpecies">Calcular Especies</Button></li>
-        </ul>
+          <button id="Filter" class="navs">Filtrar</button> 
+          </div>
+          <button id="orderAscen" class="navs">Ordenar A/Z</button>
+          <button id="orderDescen" class="navs">Ordenar Z/A</button>
+          <Button id="calculateSpecies" class="navs">Calcular Especies</Button>
       </nav>
     </header>
     <div id="root"></div>
