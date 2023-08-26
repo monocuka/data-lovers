@@ -71,18 +71,29 @@ const printDataPercent = (arrP) => {
 
   document.getElementById('root').appendChild(newDiv);
 
+  newDiv.innerHTML += `<div id="tableCalculate"  class="table">
+  <table id="calculateSp"> 
+  <tr>
+  <td>Specie</td>
+  <td>Cantidad</td>
+  <td>Porcentaje</td>
+  </tr>`;
+
+  const statsTable = document.querySelector('table');
+
   arrP.forEach(element => {
     const template = `
-        <div class="table">
-            <ul>
-            <li class="jsonSpecies">${element.name}</li>
-            <li class="jsonSpecies">${element.count}</li>
-            <li class="jsonSpecies">${element.percent}%</li>
-            </ul>
-        </div>`;
+            <tr>
+            <td class="jsonSpecies">${element.name}</td>
+            <td class="jsonSpecies">${element.count}</td>
+            <td class="jsonSpecies">${element.percent}%</td>
+            </tr>
+            `;
 
-    newDiv.innerHTML += template;
+    statsTable.innerHTML += template;
   });
+  newDiv.innerHTML += `</table>
+  </div>`
 }
 
 
@@ -90,7 +101,7 @@ const buttonCalculateSpecies = document.getElementById("calculateSpecies");
 buttonCalculateSpecies.addEventListener("click", () => {
   const CounterData = computeState(data)
   printDataPercent(CounterData);
-})
+});
 
 
 
