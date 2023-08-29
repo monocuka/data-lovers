@@ -87,13 +87,11 @@ const printDataPercent = (arrP) => {
             <td class="jsonSpecies">${element.name}</td>
             <td class="jsonSpecies">${element.count}</td>
             <td class="jsonSpecies">${element.percent}%</td>
-            </tr>
-            `;
+            </tr>`;
 
     statsTable.innerHTML += template;
   });
-  newDiv.innerHTML += `</table>
-  </div>`
+  newDiv.innerHTML += `</table> </div>`;
 }
 
 
