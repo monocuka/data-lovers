@@ -1,7 +1,5 @@
 import { filterData, sortData, computeState } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 const printData = (characters) => {
 
@@ -21,7 +19,7 @@ const printData = (characters) => {
         <div class="card">
             <div class="title">${element.name}</div>
             <div class="photo">
-                <img src="${element.image}">
+                <img src="${element.image}" alt="${element.name}" width="70%">
             </div>
             <div class"specie">${element.species}</div>
             
