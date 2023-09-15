@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <meta name="description" content="Web para Analizar y contar caracteres de texto ingresados por el usuario.">
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Data Lovers</title>
+    <link rel="apple-touch-icon" href="img/ios/192.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <img src="img/logoRyM.jpeg" alt="">
+      <nav id="menu1">  
+          <button id="callAll" class="navs">Ver todos</button>
+          <div id="filtered">
+            <select name="Filters" id="Filters" class="navs">
+              <option value="Alien">Alien</option>
+              <option value="Animal">Animal</option>
+              <option value="Cronenberg">Cronenberg</option>
+              <option value="Disease">Disease</option>
+              <option value="Human">Human</option>
+              <option value="Humanoid">Humanoid</option>
+              <option value="Mytholog">Mytholog</option>
+              <option value="Parasite">Parasite</option>
+              <option value="Poopybutthole">Poopybutthole</option>
+              <option value="Robot">Robot</option>
+              <option value="Vampire">Vampire</option>
+              <option value="unknown">unknown</option>
+            </select>
+          <button id="Filter" class="navs">Filtrar</button> 
+          </div>
+          <button id="orderAscen" class="navs">Ordenar A/Z</button>
+          <button id="orderDescen" class="navs">Ordenar Z/A</button>
+          <button id="calculateSpecies" class="navs">Calcular Especies</button>
+      </nav>
+    </header>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script defer src="main.js" type="module"></script>
+    <footer>
+      <p>Desarrollado por <a href="www.linkedin.com/monocuka">Eliana Osorio</a> con fines Didacticos</p>
+    </footer>
   </body>
 </html>
