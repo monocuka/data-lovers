@@ -39,5 +39,4 @@ describe('data.computeState', () => {
     const callComputeData = computeState(data);
     expect(callComputeData[1].count).toBe(numberofspeciesAlien);
   })
-  
 });
