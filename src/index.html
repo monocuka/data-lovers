@@ -42,6 +42,16 @@
     </header>
     <div id="root"></div>
     <script defer src="main.js" type="module"></script>
+    <script defer type="text/javascript">
+      if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function() {
+              navigator.serviceWorker
+              .register("/serviceWorker.js")
+              .then(res => console.log("service worker registered"))
+              .catch(err => console.log("service worker not registered", err))
+          })
+      }
+  </script>
     <footer>
       <p>Desarrollado por <a href="www.linkedin.com/monocuka">Eliana Osorio</a> con fines Didacticos</p>
     </footer>
